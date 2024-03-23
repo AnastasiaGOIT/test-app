@@ -26,8 +26,12 @@ export const favoritesSlice = createSlice({
       );
     },
     removeFromFavorites: (state, action) => {
-      state.favorites = state.favorites.filter(
-        item => item._id !== action.payload._id
+      state.wishlistItems = state.wishlistItems.filter(
+        item => item.name !== action.payload.name
+      );
+      localStorage.setItem(
+        'wishlistItems',
+        JSON.stringify(state.wishlistItems)
       );
     },
   },

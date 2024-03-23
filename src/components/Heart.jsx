@@ -1,25 +1,46 @@
-// import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { useDispatch } from 'react-redux';
 import { addToFavorites, removeFromFavorites } from '../redux/Favorites/slice';
 import css from './Heart.module.css';
+import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
+import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
+import { useEffect, useState } from 'react';
 
-export const Heart = ({ isFavorite, card, onClick }) => {
+export const Heart = ({ card, onClick }) => {
   const dispatch = useDispatch();
+  const [isFavorite, setIsFavorite] = useState(false);
+  const localStorageKey = `isFavorite_${card.name}`;
+  // Унікальний ключ для кожного сердечка
 
-  // const toggleFavorite = () => {
-  //   if (isFavorite) {
-  //     dispatch(removeFromFavorites(card));
-  //   } else {
-  //     dispatch(addToFavorites(card));
-  //   }
-  // };
+  useEffect(() => {
+    // При завантаженні сторінки відновлюємо стан з локального сховища
+    const storedIsFavorite = localStorage.getItem(localStorageKey);
+    if (storedIsFavorite) {
+      setIsFavorite(JSON.parse(storedIsFavorite));
+    }
+  }, []);
+
+  const toggleFavorite = () => {
+    const updatedIsFavorite = !isFavorite;
+    setIsFavorite(updatedIsFavorite);
+    // Зберігаємо стан у локальному сховищі з використанням унікального ключа
+    localStorage.setItem(localStorageKey, updatedIsFavorite);
+    // Відправляємо дію до Redux для додавання або видалення з улюблених
+    if (updatedIsFavorite) {
+      dispatch(addToFavorites(card));
+    } else {
+      dispatch(removeFromFavorites(card));
+    }
+  };
 
   return (
     <div>
-      <button onClick={onClick}>heart</button>
+      <button onClick={toggleFavorite}>
+        {isFavorite ? (
+          <FavoriteOutlinedIcon className={css.filledHeart} />
+        ) : (
+          <FavoriteBorderOutlinedIcon className={css.outlinedHeart} />
+        )}
+      </button>
     </div>
-    // <div onClick={onClick}>
-    //   {isFavorite ? <FaHeart className={css.heart} /> : <FaRegHeart />}
-    // </div>
   );
 };
