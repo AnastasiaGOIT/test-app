@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import Box from "@mui/material/Box";
-import Tab from "@mui/material/Tab";
-import { TabContext, TabList, TabPanel } from "@mui/lab";
+import React, { useState } from 'react';
+import Box from '@mui/material/Box';
+import Tab from '@mui/material/Tab';
+import { TabContext, TabList, TabPanel } from '@mui/lab';
 
-import { Features } from "../Features/Features";
-import { Form } from "../Form/Form";
-import css from "./TabPanel.module.css";
-import { Review } from "../Review/Review";
+import { Features } from '../Features/Features';
+import { Form } from '../Form/Form';
+import css from './TabPanel.module.css';
+import { Review } from '../Review/Review';
 
 export const TabPanels = ({ props }) => {
-  const [value, setValue] = React.useState("1");
+  const [value, setValue] = React.useState('1');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -18,20 +18,20 @@ export const TabPanels = ({ props }) => {
   return (
     <Box
       sx={{
-        width: "100%",
+        width: '100%',
       }}
     >
       <TabContext value={value}>
         <Box
           sx={{
             borderBottom: 1,
-            borderColor: "divider",
-            "& .MuiTabs-indicator": {
-              backgroundColor: "#E44848",
-              borderBottom: "3px solid #E44848",
+            borderColor: 'divider',
+            '& .MuiTabs-indicator': {
+              backgroundColor: '#E44848',
+              borderBottom: '3px solid #E44848',
             },
-            "& .MuiTab-root": {
-              color: "#101828", // Задайте бажаний колір тексту тут
+            '& .MuiTab-root': {
+              color: '#101828',
             },
           }}
         >

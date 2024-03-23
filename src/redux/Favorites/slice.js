@@ -12,12 +12,6 @@ export const favoritesSlice = createSlice({
   initialState,
   reducers: {
     addToFavorites: (state, action) => {
-      // let existItem = state.wishlistItems?.findIndex(
-      //   (item) => item._id === action.payload?._id
-      // );
-      // if (existItem >= 0) {
-      //   alert("This product is already exists in your wishlist");
-      // } else {
       let wishlistItem = { ...action.payload };
       state.wishlistItems?.push(wishlistItem);
       localStorage.setItem(

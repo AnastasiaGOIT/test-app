@@ -23,6 +23,7 @@
   display: flex;
   gap: 16px;
   margin-bottom: 24px;
+  align-items: center;
 }
 .name_price {
   display: flex;
@@ -68,13 +69,15 @@
 }
 
 .icon {
-  border: black;
+}
+.icon-air {
+  fill: none;
 }
 .rating {
   text-decoration: underline;
   color: #101828;
   font-size: 16px;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
 }
 .location {
   color: #101828;
@@ -97,7 +100,7 @@
   line-height: 1.5;
   letter-spacing: -0.01em;
   color: #fff;
-  font-family: "Inter", sans-serif;
+  font-family: 'Inter', sans-serif;
   cursor: pointer;
   display: flex;
   justify-content: center;

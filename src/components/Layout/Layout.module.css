@@ -1,0 +1,9 @@
+.list {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f2f4f7;
+  border-radius: 10px;
+  color: #e44848;
+}

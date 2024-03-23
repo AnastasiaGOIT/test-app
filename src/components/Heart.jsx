@@ -22,9 +22,9 @@ export const Heart = ({ card, onClick }) => {
   const toggleFavorite = () => {
     const updatedIsFavorite = !isFavorite;
     setIsFavorite(updatedIsFavorite);
-    // Зберігаємо стан у локальному сховищі з використанням унікального ключа
+
     localStorage.setItem(localStorageKey, updatedIsFavorite);
-    // Відправляємо дію до Redux для додавання або видалення з улюблених
+
     if (updatedIsFavorite) {
       dispatch(addToFavorites(card));
     } else {

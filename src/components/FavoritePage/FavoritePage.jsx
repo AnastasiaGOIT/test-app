@@ -6,6 +6,8 @@ import sprite from '../../icons/sprite.svg';
 import { ShowMoreModal } from 'components/ShowMoreModal/ShowMoreModal';
 import Modal from 'Modal/Modal';
 import { addToFavorites } from '../../redux/Favorites/slice';
+import { NavLink } from 'react-router-dom';
+import { Typography } from '@mui/material';
 
 export const FavoritePage = () => {
   const dispatch = useDispatch();
@@ -32,7 +34,6 @@ export const FavoritePage = () => {
   console.log(wishlistItems);
   return (
     <div>
-      <h1>Favorites</h1>
       {wishlistItems.length === 0 ? (
         <p>No favorite ads yet</p>
       ) : (
@@ -54,13 +55,6 @@ export const FavoritePage = () => {
                     <h3 className={css.title}>{props.name}</h3>
 
                     <p className={css.price}>€{props.price}</p>
-                    {/* <button className={css.btn_heart}>
-                      <Heart
-                        isFavorite={isFavorite}
-                        onClick={() => addToFavoritesHandler(props)}
-                        card={props}
-                      />
-                    </button> */}
                   </div>
                   <div className={css.rating_location}>
                     <p className={css.rating}>

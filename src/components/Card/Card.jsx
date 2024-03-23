@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { Button } from '../Button';
 import css from './Card.module.css';
 import sprite from '../../icons/sprite.svg';
 import Modal from '../../Modal/Modal';
@@ -13,7 +12,6 @@ const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 export const Card = props => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [openShowMore, setShowMore] = useState(false);
-  const [getIdColumn, setIdColumn] = useState(null);
   const dispatch = useDispatch();
 
   const addToFavoritesHandler = card => {
@@ -58,6 +56,9 @@ export const Card = props => {
           />
         </div>
         <div className={css.rating_location}>
+          <svg width={20} height={20} className={css.icon}>
+            <use href={`${sprite}#icon-star`} />
+          </svg>
           <p className={css.rating}>
             {props.rating} ({props.reviews.length} reviews)
           </p>
@@ -105,7 +106,7 @@ export const Card = props => {
           </li>
           <li className={css.item}>
             {' '}
-            <svg width={20} height={20} className={css.icon}>
+            <svg width={20} height={20} className={css.icon_air}>
               <use href={`${sprite}#icon-conditioner`} />
             </svg>
             AC
