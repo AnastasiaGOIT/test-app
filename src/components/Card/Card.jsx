@@ -1,21 +1,22 @@
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { Button } from "../Button";
-import css from "./Card.module.css";
-import sprite from "../../icons/sprite.svg";
-import Modal from "../../Modal/Modal";
-import { ShowMoreModal } from "../ShowMoreModal/ShowMoreModal";
-import { Heart } from "../Heart";
-import { addToFavorites } from "../../redux/Favorites/slice";
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { Button } from '../Button';
+import css from './Card.module.css';
+import sprite from '../../icons/sprite.svg';
+import Modal from '../../Modal/Modal';
+import { ShowMoreModal } from '../ShowMoreModal/ShowMoreModal';
+import { Heart } from '../Heart';
+import { addToFavorites } from '../../redux/Favorites/slice';
 
-const label = { inputProps: { "aria-label": "Checkbox demo" } };
+const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
 
-export const Card = (props) => {
+export const Card = props => {
   const [isFavorite, setIsFavorite] = useState(false);
   const [openShowMore, setShowMore] = useState(false);
   const [getIdColumn, setIdColumn] = useState(null);
   const dispatch = useDispatch();
-  const addToFavoritesHandler = (card) => {
+
+  const addToFavoritesHandler = card => {
     dispatch(addToFavorites(card));
   };
 
@@ -31,7 +32,7 @@ export const Card = (props) => {
 
   const shortenDescription = (description, maxLength) => {
     if (description.length <= maxLength) return description;
-    return description.slice(0, maxLength) + "...";
+    return description.slice(0, maxLength) + '...';
   };
   return (
     <div className={css.container}>
@@ -49,13 +50,12 @@ export const Card = (props) => {
           <h3 className={css.title}>{props.name}</h3>
 
           <p className={css.price}>€{props.price}</p>
-          <button className={css.btn_heart}>
-            <Heart
-              isFavorite={isFavorite}
-              onClick={() => addToFavoritesHandler(props)}
-              card={props}
-            />
-          </button>
+
+          <Heart
+            isFavorite={isFavorite}
+            onClick={() => addToFavoritesHandler(props)}
+            card={props}
+          />
         </div>
         <div className={css.rating_location}>
           <p className={css.rating}>
@@ -83,28 +83,28 @@ export const Card = (props) => {
             {props.transmission}
           </li>
           <li className={css.item}>
-            {" "}
+            {' '}
             <svg width={20} height={20} className={css.icon}>
               <use href={`${sprite}#icon-petrol`} />
             </svg>
             {props.engine}
           </li>
           <li className={css.item}>
-            {" "}
+            {' '}
             <svg width={20} height={20} className={css.icon}>
               <use href={`${sprite}#icon-kitchen`} />
             </svg>
             Kitchen
           </li>
           <li className={css.item}>
-            {" "}
+            {' '}
             <svg width={20} height={20} className={css.icon}>
               <use href={`${sprite}#icon-bed`} />
             </svg>
             {props.details.beds} beds
           </li>
           <li className={css.item}>
-            {" "}
+            {' '}
             <svg width={20} height={20} className={css.icon}>
               <use href={`${sprite}#icon-conditioner`} />
             </svg>
@@ -117,7 +117,7 @@ export const Card = (props) => {
           </Modal>
         )}
         <button
-          children={"Show more"}
+          children={'Show more'}
           className={css.button_red}
           onClick={() => {
             showMore();
