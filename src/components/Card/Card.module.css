@@ -83,6 +83,16 @@
 .icon-air {
   fill: none;
 }
+.icon_automatic {
+  stroke: #000;
+}
+.icon_kitchen {
+  stroke: #000;
+}
+.icon_bed {
+  fill: none;
+  stroke: #000;
+}
 .rating {
   text-decoration: underline;
   color: #101828;
@@ -118,4 +128,18 @@
 .button_red:hover {
   background-color: #d84343;
   border: none;
+}
+
+.icon_air {
+  fill: none;
+  stroke: #000;
+}
+.icon_cd {
+  fill: none;
+  stroke: #000;
+}
+
+.icon_radio {
+  fill: none;
+  stroke: #000;
 }
