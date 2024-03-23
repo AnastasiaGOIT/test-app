@@ -33,7 +33,7 @@ export const Heart = ({ card, onClick }) => {
   };
 
   return (
-    <div>
+    <div className={css.div}>
       <button onClick={toggleFavorite}>
         {isFavorite ? (
           <FavoriteOutlinedIcon className={css.filledHeart} />

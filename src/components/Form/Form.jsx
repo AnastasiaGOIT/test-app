@@ -89,9 +89,9 @@ export const Form = () => {
           placeholder="Comment"
           className={css.textarea}
         ></textarea>
-        <Button type="submit" className={css.button}>
+        <button type="submit" className={css.button}>
           Send
-        </Button>
+        </button>
       </form>
     </div>
   );

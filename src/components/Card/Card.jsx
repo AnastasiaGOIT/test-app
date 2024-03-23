@@ -46,14 +46,15 @@ export const Card = props => {
       <div className={css.container_s}>
         <div className={css.name_price}>
           <h3 className={css.title}>{props.name}</h3>
+          <div className={css.price_heart}>
+            <p className={css.price}>€{props.price}</p>
 
-          <p className={css.price}>€{props.price}</p>
-
-          <Heart
-            isFavorite={isFavorite}
-            onClick={() => addToFavoritesHandler(props)}
-            card={props}
-          />
+            <Heart
+              isFavorite={isFavorite}
+              onClick={() => addToFavoritesHandler(props)}
+              card={props}
+            />
+          </div>
         </div>
         <div className={css.rating_location}>
           <svg width={20} height={20} className={css.icon}>
