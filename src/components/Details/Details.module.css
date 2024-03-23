@@ -1,0 +1,28 @@
+.title {
+  margin-top: 44px;
+}
+
+.container {
+  width: 430px;
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 24px;
+}
+
+.text {
+  color: #101828;
+
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

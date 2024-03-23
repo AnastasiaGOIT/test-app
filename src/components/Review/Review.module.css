@@ -1,0 +1,18 @@
+.container {
+  width: 430px;
+}
+
+.name {
+  margin-top: 44px;
+  margin-bottom: 4px;
+  color: #101828;
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 24px; /* 133.333% */
+}
+.comment {
+  margin-top: 16px;
+  color: #475467;
+  font-size: 16px;
+  line-height: 24px; /* 150% */
+}
