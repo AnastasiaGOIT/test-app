@@ -1,6 +1,4 @@
 import React from 'react';
-import { Features } from '../Features/Features';
-import { Form } from '../Form/Form';
 import { TabPanels } from '../TabPanel/TabPanel';
 import css from './ShowMoreModal.module.css';
 import sprite from '../../icons/sprite.svg';

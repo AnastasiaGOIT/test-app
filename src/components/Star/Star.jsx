@@ -5,7 +5,7 @@ import css from './Star.module.css';
 
 export const Star = ({ stars }) => {
   const ratingStar = Array.from({ length: 5 }, (elem, index) => {
-    let number = index + 0.5;
+    // let number = index + 0.5;
     return (
       <div></div>
       // <span key={index}>

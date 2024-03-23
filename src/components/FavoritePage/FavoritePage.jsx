@@ -1,27 +1,15 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import css from '../Card/Card.module.css';
-import { Heart } from 'components/Heart';
+
 import sprite from '../../icons/sprite.svg';
 import { ShowMoreModal } from 'components/ShowMoreModal/ShowMoreModal';
 import Modal from 'Modal/Modal';
-import { addToFavorites } from '../../redux/Favorites/slice';
-import { NavLink } from 'react-router-dom';
-import { Typography } from '@mui/material';
 
 export const FavoritePage = () => {
-  const dispatch = useDispatch();
-  const [isFavorite, setIsFavorite] = useState(false);
   const [openShowMore, setShowMore] = useState(false);
-  const addToFavoritesHandler = card => {
-    dispatch(addToFavorites(card));
-  };
 
-  const [expanded, setExpanded] = useState(false);
-
-  const toggleExpand = () => {
-    setExpanded(!expanded);
-  };
+  const [expanded] = useState(false);
 
   const shortenDescription = (description, maxLength) => {
     if (description.length <= maxLength) return description;

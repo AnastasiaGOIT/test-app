@@ -1,5 +1,4 @@
 import React from 'react';
-import Checkbox from '@mui/material/Checkbox';
 
 import css from '../Form/Form.module.css';
 import style from './Search.module.css';

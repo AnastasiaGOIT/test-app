@@ -40,7 +40,7 @@
 
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import { Button } from '../Button';
+
 import css from './Form.module.css';
 
 export const Form = () => {

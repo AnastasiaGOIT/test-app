@@ -9,15 +9,13 @@ export const Heart = ({ card, onClick }) => {
   const dispatch = useDispatch();
   const [isFavorite, setIsFavorite] = useState(false);
   const localStorageKey = `isFavorite_${card.name}`;
-  // Унікальний ключ для кожного сердечка
 
   useEffect(() => {
-    // При завантаженні сторінки відновлюємо стан з локального сховища
     const storedIsFavorite = localStorage.getItem(localStorageKey);
     if (storedIsFavorite) {
       setIsFavorite(JSON.parse(storedIsFavorite));
     }
-  }, []);
+  }, [localStorageKey]);
 
   const toggleFavorite = () => {
     const updatedIsFavorite = !isFavorite;
