@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import css from '../';
 
 import sprite from '../../icons/sprite.svg';
 import { ShowMoreModal } from 'components/ShowMoreModal/ShowMoreModal';
 import Modal from 'Modal/Modal';
+import css from '../Card/Card.module.css';
 
 export const FavoritePage = () => {
   const [openShowMore, setShowMore] = useState(false);
@@ -64,8 +64,12 @@ export const FavoritePage = () => {
                       {props.adults} adults
                     </li>
                     <li className={css.item}>
-                      <svg width={20} height={20} className={css.icon_automatic}>
-                        <use href={`${sprite}#automatic`} />
+                      <svg
+                        width={20}
+                        height={20}
+                        className={css.icon_automatic}
+                      >
+                        <use href={`${sprite}#icon-automatic`} />
                       </svg>
                       {props.transmission}
                     </li>
