@@ -22,6 +22,12 @@
   max-height: 600px;
   overflow-y: auto;
 }
+/* .icon {
+  transform: rotate(45deg);
+  width: 18px;
+  height: 18px;
+  stroke: black;
+} */
 
 .close_btn {
   stroke: black;
@@ -33,11 +39,4 @@
 
 .close_btn:hover {
   color: black;
-}
-
-.icon {
-  transform: rotate(45deg);
-  width: 18px;
-  height: 18px;
-  stroke: black;
 }
