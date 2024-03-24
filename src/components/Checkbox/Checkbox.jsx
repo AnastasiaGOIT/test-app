@@ -81,10 +81,10 @@ export const CheckboxList = () => {
                   <svg
                     width={32}
                     height={32}
-                    className={css.icon_automatic}
-                    style={{ marginRight: '8px' }}
+                    // className={css.icon_automatic}
+                    // style={{ marginRight: '8px' }}
                   >
-                    <use href={`${sprite}#icon-automatic`} />
+                    <use href={`${sprite}#icon-ac`} />
                   </svg>
                   AC
                 </Box>

@@ -5,7 +5,7 @@ import css from './Layout.module.css';
 
 export const Layout = () => {
   return (
-    <div>
+    <div className={css.container}>
       <ul className={css.list}>
         <li>
           {' '}
