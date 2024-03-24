@@ -7,7 +7,7 @@ import { Features } from '../Features/Features';
 
 import css from './TabPanel.module.css';
 import { Review } from '../Review/Review';
-import { Form, FormBook } from 'components/Form/Form';
+import { FormBook } from 'components/Form/Form';
 
 export const TabPanels = ({ props }) => {
   const [value, setValue] = React.useState('1');
