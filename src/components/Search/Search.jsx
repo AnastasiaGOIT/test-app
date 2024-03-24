@@ -11,8 +11,10 @@ export const Search = () => {
       <input type="text" className={css.input} placeholder="Kyiv, Ukraine" />
       <p className={css.text}>Filters</p>
       <h3 className={css.title}>Vehicle equipment</h3>
+      <div class={css.line}></div>
       <CheckboxList />
       <h3 className={css.title}>Vehicle type</h3>
+      <div class={css.line}></div>
       <button children={'Search'} className={style.button_red} />
     </div>
   );
