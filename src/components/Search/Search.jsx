@@ -1,4 +1,5 @@
 import { CheckboxList } from 'components/Checkbox/Checkbox';
+import RadioGroupButton from 'components/RadioGroupButton/RadioGroupButton';
 import React from 'react';
 
 import css from '../Form/Form.module.css';
@@ -13,8 +14,11 @@ export const Search = () => {
       <h3 className={css.title}>Vehicle equipment</h3>
       <div class={css.line}></div>
       <CheckboxList />
+
       <h3 className={css.title}>Vehicle type</h3>
+
       <div class={css.line}></div>
+      <RadioGroupButton />
       <button children={'Search'} className={style.button_red} />
     </div>
   );
