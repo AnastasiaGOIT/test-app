@@ -1,3 +1,4 @@
+import { Checkbox, CheckboxList } from 'components/Checkbox/Checkbox';
 import React from 'react';
 
 import css from '../Form/Form.module.css';
@@ -10,34 +11,8 @@ export const Search = () => {
       <input type="text" className={css.input} placeholder="Kyiv, Ukraine" />
       <p className={css.text}>Filters</p>
       <h3 className={css.title}>Vehicle equipment</h3>
-
-      <ul className={css.list_checkbox}>
-        <li className={css.item}>
-          <label className={style.custom_checkbox}>
-            <input type="checkbox" />
-          </label>
-        </li>
-        <li className={css.item}>
-          <label className={style.custom_checkbox}>
-            <input type="checkbox" />
-          </label>
-        </li>
-        <li className={css.item}>
-          <label className={style.custom_checkbox}>
-            <input type="checkbox" />
-          </label>
-        </li>
-        <li className={css.item}>
-          <label className={style.custom_checkbox}>
-            <input type="checkbox" />
-          </label>
-        </li>
-        <li className={css.item}>
-          <label className={style.custom_checkbox}>
-            <input type="checkbox" />
-          </label>
-        </li>
-      </ul>
+      <CheckboxList />
+      <h3 className={css.title}>Vehicle type</h3>
       <button children={'Search'} className={style.button_red} />
     </div>
   );
