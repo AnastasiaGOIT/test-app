@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchAdverts } from "../../services/api";
-import { selectCards } from "../../redux/Cards/selector";
-import { Card } from "../Card/Card";
-import css from "./List.module.css";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchAdverts } from '../../services/api';
+import { selectCards } from '../../redux/Cards/selector';
+import { Card } from '../Card/Card';
+import css from './List.module.css';
 
 export const List = () => {
   const cardsData = useSelector(selectCards);
@@ -25,7 +25,7 @@ export const List = () => {
     <div>
       <div>
         <ul>
-          {slice.map((item) => (
+          {slice.map(item => (
             <Card
               key={item._id}
               name={item.name}
@@ -49,9 +49,11 @@ export const List = () => {
           ))}
         </ul>
 
-        <button onClick={showMore} className={css.button}>
-          Load more
-        </button>
+        {cardsData.length > page && (
+          <button onClick={showMore} className={css.button}>
+            Load more
+          </button>
+        )}
       </div>
     </div>
   );
