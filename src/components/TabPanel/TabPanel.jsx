@@ -7,7 +7,7 @@ import { Features } from '../Features/Features';
 
 import css from './TabPanel.module.css';
 import { Review } from '../Review/Review';
-import { Form } from 'components/Form/Form';
+import { Form, FormBook } from 'components/Form/Form';
 
 export const TabPanels = ({ props }) => {
   const [value, setValue] = React.useState('1');
@@ -44,13 +44,13 @@ export const TabPanels = ({ props }) => {
         <TabPanel value="1">
           <div className={css.block}>
             <Features props={props} />
-            <Form />
+            <FormBook />
           </div>
         </TabPanel>
         <TabPanel value="2">
           <div className={css.block}>
             <Review props={props} />
-            <Form />
+            <FormBook />
           </div>
         </TabPanel>
       </TabContext>
