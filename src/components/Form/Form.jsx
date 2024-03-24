@@ -1,4 +1,3 @@
-import { Button } from '../Button';
 import * as React from 'react';
 import { Field, Form, Formik } from 'formik';
 import * as Yup from 'yup';
@@ -79,7 +78,7 @@ export const FormBook = () => {
               placeholder="Comment"
               className={css.textarea}
             />
-            <Button children={'Send'} />
+            <button className={css.button} children={'Send'} />
           </Form>
         )}
       </Formik>
