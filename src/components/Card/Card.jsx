@@ -7,7 +7,7 @@ import { ShowMoreModal } from '../ShowMoreModal/ShowMoreModal';
 import { Heart } from '../Heart';
 import { addToFavorites } from '../../redux/Favorites/slice';
 
-// const label = { inputProps: { 'aria-label': 'Checkbox demo' } };
+
 
 export const Card = props => {
   const [isFavorite] = useState(false);
@@ -24,9 +24,7 @@ export const Card = props => {
 
   const [expanded] = useState(false);
 
-  // const toggleExpand = () => {
-  //   setExpanded(!expanded);
-  // };
+
 
   const shortenDescription = (description, maxLength) => {
     if (description.length <= maxLength) return description;

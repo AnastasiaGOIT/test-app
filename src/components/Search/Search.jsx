@@ -1,4 +1,4 @@
-import { Checkbox, CheckboxList } from 'components/Checkbox/Checkbox';
+import { CheckboxList } from 'components/Checkbox/Checkbox';
 import React from 'react';
 
 import css from '../Form/Form.module.css';

@@ -4,9 +4,10 @@ import Tab from '@mui/material/Tab';
 import { TabContext, TabList, TabPanel } from '@mui/lab';
 
 import { Features } from '../Features/Features';
-import { Form } from '../Form/Form';
+
 import css from './TabPanel.module.css';
 import { Review } from '../Review/Review';
+import { Form } from 'components/Form/Form';
 
 export const TabPanels = ({ props }) => {
   const [value, setValue] = React.useState('1');

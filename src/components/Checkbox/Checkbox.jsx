@@ -1,14 +1,13 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import FormLabel from '@mui/material/FormLabel';
+
 import FormControl from '@mui/material/FormControl';
 import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import FormHelperText from '@mui/material/FormHelperText';
+
 import Checkbox from '@mui/material/Checkbox';
 import sprite from '../../icons/sprite.svg';
 import css from '../Card/Card.module.css';
-import { height } from '@mui/system';
 
 export const CheckboxList = () => {
   const [state, setState] = React.useState({
@@ -78,12 +77,7 @@ export const CheckboxList = () => {
                     transform: 'translate(-50%, -50%)',
                   }}
                 >
-                  <svg
-                    width={32}
-                    height={32}
-                    // className={css.icon_automatic}
-                    // style={{ marginRight: '8px' }}
-                  >
+                  <svg width={32} height={32}>
                     <use href={`${sprite}#icon-ac`} />
                   </svg>
                   AC
